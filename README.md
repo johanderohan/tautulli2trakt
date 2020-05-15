@@ -71,13 +71,13 @@ Run script for initial setup and follow instructions
 
 #### Arguments
 - Playback Start / Playback Resume :  
-`-m {media_type} -s "{show_name}" -M "{title}" -y "{year}" -t "{thetvdb_id}" -i "{imdb_id}" -S {season_num} -E {episode_num} -P {progress_percent} -a start`  
+`-m {media_type} -s "{show_name}" -M "{title}" -y "{year}" -d "{themoviedb_id}" -t "{thetvdb_id}" -i "{imdb_id}" -S {season_num} -E {episode_num} -P {progress_percent} -a start`  
 
 - Playback Stop / Watched :  
-`-m {media_type} -s "{show_name}" -M "{title}" -y "{year}" -t "{thetvdb_id}" -i "{imdb_id}" -S {season_num} -E {episode_num} -P {progress_percent} -a stop` 
+`-m {media_type} -s "{show_name}" -M "{title}" -y "{year}" -d "{themoviedb_id}" -t "{thetvdb_id}" -i "{imdb_id}" -S {season_num} -E {episode_num} -P {progress_percent} -a stop` 
 
 - Playback Pause :   
-`-m {media_type} -s "{show_name}" -M "{title}" -y "{year}" -t "{thetvdb_id}" -i "{imdb_id}" -S {season_num} -E {episode_num} -P {progress_percent} -a pause`
+`-m {media_type} -s "{show_name}" -M "{title}" -y "{year}" -d "{themoviedb_id}" -t "{thetvdb_id}" -i "{imdb_id}" -S {season_num} -E {episode_num} -P {progress_percent} -a pause`
 
 
 ## Usage
@@ -92,6 +92,7 @@ Run script for initial setup and follow instructions
 -y | --year         Year of the movie/TV Show
 -S | --season       Season number
 -E | --Episode      Episode number
+-d | --TMDB         TMDB ID
 -t | --TVDB         TVDB ID
 -i | --IMDB         IMDB ID
 -P | --progress     Percentage progress (Ex: 10.0)
