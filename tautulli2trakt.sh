@@ -238,7 +238,7 @@ case $key in
     shift # past argument
     shift # past value
     ;;
-    -d|--TMDB)
+    -b|--TMDB)
     TMDB_ID="$2"
     shift # past argument
     shift # past value
@@ -313,7 +313,7 @@ if [ -n "$MEDIA" ] ; then
             }
         }"
     elif [[ $MEDIA == "show" ]] || [[ $MEDIA == "episode" ]]; then
-       if [[ $TVDB_ID != "" ]] || [[ $TVDB_ID != "None" ]]; then
+       if [[ $TVDB_ID ]]; then
            body="\\\"show\\\": {
                 \\\"title\\\": \\\"${SHOWNAME}\\\",
                 \\\"year\\\": ${YEAR},
@@ -325,7 +325,7 @@ if [ -n "$MEDIA" ] ; then
                 \\\"season\\\": ${SEASON},
                 \\\"number\\\": ${EPISODE}
             }"
-        elif [[ $TMDB_ID != "" ]] || [[ $TMDB_ID != "None" ]]; then
+        elif [[ $TMDB_ID ]]; then
             body="\\\"show\\\": {
                   \\\"title\\\": \\\"${SHOWNAME}\\\",
                   \\\"year\\\": ${YEAR},
